@@ -11,7 +11,16 @@ export const getWordsTotal = (text: string): number => {
   const trimmedText = text
     .replaceAll("\n", " ")
     .split(" ")
-    .filter((word) => word !== "" && word !== "\n");
+    .filter((word) => word !== "");
+
+  return trimmedText.length;
+};
+
+export const getCharactersTotal = (text: string): number => {
+  const trimmedText = text
+    .replaceAll("\n", "")
+    .split("")
+    .filter((character) => character !== " ");
 
   return trimmedText.length;
 };
