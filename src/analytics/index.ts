@@ -6,3 +6,12 @@ export const getParagraphsCount = (text: string): number => {
 
   return trimmedText.length;
 };
+
+export const getWordsCount = (text: string): number => {
+  const trimmedText = text
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((word) => word !== "" && word !== "\n");
+
+  return trimmedText.length;
+};
