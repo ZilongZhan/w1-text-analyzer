@@ -24,3 +24,12 @@ export const getCharactersTotal = (text: string): number => {
 
   return trimmedText.length;
 };
+
+export const getShortWordsTotal = (text: string): number => {
+  const trimmedText = text
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((word) => word !== "" && word.length <= 4);
+
+  return trimmedText.length;
+};

@@ -1,6 +1,7 @@
 import {
   getCharactersTotal,
   getParagraphsTotal,
+  getShortWordsTotal,
   getWordsTotal,
 } from "../analytics/index.js";
 
@@ -129,4 +130,5 @@ export const analyzeText = (text: string): void => {
   renderParagraphsTotal(getParagraphsTotal(text));
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
+  renderShortWordsTotal(getShortWordsTotal(text));
 };
