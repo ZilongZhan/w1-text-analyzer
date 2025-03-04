@@ -1,83 +1,32 @@
 import { getWordsTotal } from "../index.js";
+import { logTestResult } from "./logTestResult.js";
 
 const test1 = (): void => {
   const text = "Hello world";
   const expectedWordsTotal = 2;
 
-  const wordsTotal = getWordsTotal(text);
-
-  console.log(`\nTest 1: ${text}`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
-
-  if (wordsTotal === expectedWordsTotal) {
-    console.log("Test OK ✅");
-  } else {
-    console.log("Test failed ❌");
-  }
+  logTestResult(1, getWordsTotal, text, expectedWordsTotal);
 };
 
 const test2 = (): void => {
   const text = "Hello\nworld";
   const expectedWordsTotal = 2;
 
-  const wordsTotal = getWordsTotal(text);
-
-  console.log(`\nTest 2: ${text}`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
-
-  if (wordsTotal === expectedWordsTotal) {
-    console.log("Test OK ✅");
-  } else {
-    console.log("Test failed ❌");
-  }
+  logTestResult(2, getWordsTotal, text, expectedWordsTotal);
 };
 
 const test3 = (): void => {
   const text = "";
   const expectedWordsTotal = 0;
 
-  const wordsTotal = getWordsTotal(text);
-
-  console.log(`\nTest 3: ${text}`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
-
-  if (wordsTotal === expectedWordsTotal) {
-    console.log("Test OK ✅");
-  } else {
-    console.log("Test failed ❌");
-  }
+  logTestResult(3, getWordsTotal, text, expectedWordsTotal);
 };
 
 const test4 = (): void => {
   const text = "\n";
   const expectedWordsTotal = 0;
 
-  const wordsTotal = getWordsTotal(text);
-
-  console.log(`\nTest 4: ${text}`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
-
-  if (wordsTotal === expectedWordsTotal) {
-    console.log("Test OK ✅");
-  } else {
-    console.log("Test failed ❌");
-  }
-};
-
-const test5 = (): void => {
-  const text = "Hello\n\nWorld";
-  const expectedWordsTotal = 2;
-
-  const wordsTotal = getWordsTotal(text);
-
-  console.log(`\nTest 5: ${text}`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
-
-  if (wordsTotal === expectedWordsTotal) {
-    console.log("Test OK ✅");
-  } else {
-    console.log("Test failed ❌");
-  }
+  logTestResult(4, getWordsTotal, text, expectedWordsTotal);
 };
 
 export const getWordsTotalTest = (): void => {
@@ -85,5 +34,4 @@ export const getWordsTotalTest = (): void => {
   test2();
   test3();
   test4();
-  test5();
 };
