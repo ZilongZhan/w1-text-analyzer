@@ -1,15 +1,15 @@
-import { getWordsCount } from "../index.js";
+import { getWordsTotal } from "../index.js";
 
 const test1 = (): void => {
   const text = "Hello world";
   const wordsExpected = 2;
 
-  const wordsCount = getWordsCount(text);
+  const wordsTotal = getWordsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${wordsExpected} | Result: ${wordsCount}`);
+  console.log(`Expected Result: ${wordsExpected} | Result: ${wordsTotal}`);
 
-  if (wordsCount === wordsExpected) {
+  if (wordsTotal === wordsExpected) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -20,7 +20,7 @@ const test2 = (): void => {
   const text = "Hello\nworld";
   const wordsExpected = 2;
 
-  const wordsCount = getWordsCount(text);
+  const wordsCount = getWordsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${wordsExpected} | Result: ${wordsCount}`);
@@ -36,7 +36,7 @@ const test3 = (): void => {
   const text = "";
   const wordsExpected = 0;
 
-  const wordsCount = getWordsCount(text);
+  const wordsCount = getWordsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${wordsExpected} | Result: ${wordsCount}`);
@@ -52,7 +52,7 @@ const test4 = (): void => {
   const text = "\n";
   const wordsExpected = 0;
 
-  const wordsCount = getWordsCount(text);
+  const wordsCount = getWordsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${wordsExpected} | Result: ${wordsCount}`);
@@ -68,7 +68,7 @@ const test5 = (): void => {
   const text = "Hello\n\nWorld";
   const wordsExpected = 2;
 
-  const wordsCount = getWordsCount(text);
+  const wordsCount = getWordsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${wordsExpected} | Result: ${wordsCount}`);
@@ -80,7 +80,7 @@ const test5 = (): void => {
   }
 };
 
-export const getWordsCountTest = (): void => {
+export const getWordsTotalTest = (): void => {
   test1();
   test2();
   test3();

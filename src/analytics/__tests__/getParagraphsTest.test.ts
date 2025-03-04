@@ -1,10 +1,10 @@
-import { getParagraphsCount } from "../index.js";
+import { getParagraphsTotal } from "../index.js";
 
 const test1 = (): void => {
   const text = "Hello world";
   const paragraphsExpected = 1;
 
-  const paragraphsCount = getParagraphsCount(text);
+  const paragraphsCount = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(
@@ -22,7 +22,7 @@ const test2 = (): void => {
   const text = "Hello\n\nworld";
   const expectedParagraphs = 2;
 
-  const paragraphs = getParagraphsCount(text);
+  const paragraphs = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
@@ -38,7 +38,7 @@ const test3 = (): void => {
   const text = "";
   const expectedParagraphs = 0;
 
-  const paragraphs = getParagraphsCount(text);
+  const paragraphs = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
@@ -54,12 +54,14 @@ const test4 = (): void => {
   const text = " ";
   const expectedParagraphs = 0;
 
-  const paragraphs = getParagraphsCount(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
+  console.log(
+    `Expected Result: ${expectedParagraphs} | Result: ${paragraphsTotal}`
+  );
 
-  if (paragraphs === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphs) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -70,7 +72,7 @@ const test5 = (): void => {
   const text = "\n\n";
   const expectedParagraphs = 0;
 
-  const paragraphs = getParagraphsCount(text);
+  const paragraphs = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
@@ -86,7 +88,7 @@ const test6 = (): void => {
   const text = "\n";
   const expectedParagraphs = 0;
 
-  const paragraphs = getParagraphsCount(text);
+  const paragraphs = getParagraphsTotal(text);
 
   console.log(`\ninputTested: ${text}`);
   console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
@@ -98,10 +100,11 @@ const test6 = (): void => {
   }
 };
 
-export const getParagraphsCountTest = (): void => {
+export const getParagraphsTotalTest = (): void => {
   test1();
   test2();
   test3();
   test4();
   test5();
+  test6();
 };

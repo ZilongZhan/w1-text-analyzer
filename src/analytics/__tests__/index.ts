@@ -1,5 +1,5 @@
-import { getParagraphsCountTest } from "./getParagraphsCount.test.js";
-import { getWordsCountTest } from "./getWordsCount.test.js";
+import { getParagraphsTotalTest } from "./getParagraphsTest.test.js";
+import { getWordsTotalTest } from "./getWordsTotal.test.js";
 
-getParagraphsCountTest();
-getWordsCountTest();
+getParagraphsTotalTest();
+getWordsTotalTest();

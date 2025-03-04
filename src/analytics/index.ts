@@ -1,4 +1,4 @@
-export const getParagraphsCount = (text: string): number => {
+export const getParagraphsTotal = (text: string): number => {
   const trimmedText = text
     .replaceAll(" ", "")
     .split("\n\n")
@@ -7,7 +7,7 @@ export const getParagraphsCount = (text: string): number => {
   return trimmedText.length;
 };
 
-export const getWordsCount = (text: string): number => {
+export const getWordsTotal = (text: string): number => {
   const trimmedText = text
     .replaceAll("\n", " ")
     .split(" ")
