@@ -2,16 +2,16 @@ import { getParagraphsTotal } from "../index.js";
 
 const test1 = (): void => {
   const text = "Hello world";
-  const paragraphsExpected = 1;
+  const paragraphsExpectedTotal = 1;
 
-  const paragraphsCount = getParagraphsTotal(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
+  console.log(`\nTest 1: ${text}`);
   console.log(
-    `Expected Result: ${paragraphsExpected} | Result: ${paragraphsCount}`
+    `Expected Result: ${paragraphsExpectedTotal} | Result: ${paragraphsTotal}`
   );
 
-  if (paragraphsCount === paragraphsExpected) {
+  if (paragraphsTotal === paragraphsExpectedTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -20,14 +20,16 @@ const test1 = (): void => {
 
 const test2 = (): void => {
   const text = "Hello\n\nworld";
-  const expectedParagraphs = 2;
+  const expectedParagraphsTotal = 2;
 
-  const paragraphs = getParagraphsTotal(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
+  console.log(`\nTest 2: ${text}`);
+  console.log(
+    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+  );
 
-  if (paragraphs === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphsTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -36,14 +38,16 @@ const test2 = (): void => {
 
 const test3 = (): void => {
   const text = "";
-  const expectedParagraphs = 0;
+  const expectedParagraphsTotal = 0;
 
-  const paragraphs = getParagraphsTotal(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
+  console.log(`\nTest 3: ${text}`);
+  console.log(
+    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+  );
 
-  if (paragraphs === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphsTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -52,16 +56,16 @@ const test3 = (): void => {
 
 const test4 = (): void => {
   const text = " ";
-  const expectedParagraphs = 0;
+  const expectedParagraphsTotal = 0;
 
   const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
+  console.log(`\nTest 4: ${text}`);
   console.log(
-    `Expected Result: ${expectedParagraphs} | Result: ${paragraphsTotal}`
+    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
   );
 
-  if (paragraphsTotal === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphsTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -70,14 +74,16 @@ const test4 = (): void => {
 
 const test5 = (): void => {
   const text = "\n\n";
-  const expectedParagraphs = 0;
+  const expectedParagraphsTotal = 0;
 
-  const paragraphs = getParagraphsTotal(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
+  console.log(`\nTest 5: ${text}`);
+  console.log(
+    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+  );
 
-  if (paragraphs === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphsTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
@@ -86,14 +92,16 @@ const test5 = (): void => {
 
 const test6 = (): void => {
   const text = "\n";
-  const expectedParagraphs = 0;
+  const expectedParagraphsTotal = 0;
 
-  const paragraphs = getParagraphsTotal(text);
+  const paragraphsTotal = getParagraphsTotal(text);
 
-  console.log(`\ninputTested: ${text}`);
-  console.log(`Expected Result: ${expectedParagraphs} | Result: ${paragraphs}`);
+  console.log(`\nTest 6: ${text}`);
+  console.log(
+    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+  );
 
-  if (paragraphs === expectedParagraphs) {
+  if (paragraphsTotal === expectedParagraphsTotal) {
     console.log("Test OK ✅");
   } else {
     console.log("Test failed ❌");
