@@ -6,6 +6,7 @@ import {
   getWordsTotal,
   getWordFrequency,
   getReversedText,
+  getCensoredText,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -98,12 +99,11 @@ const listenForbiddenWordsChanges = (text: string): void => {
   forbiddenContainer
     .querySelector("input")!
     .addEventListener("input", (event) => {
-      // The variable forbiddenWords contains the words entered by the user in the input, already splitted
       const forbiddenWords = (event.target as HTMLInputElement).value.split(
         /,\s*/
       );
 
-      // Render the forbidden words
+      renderForbiddenWords(getCensoredText(text, forbiddenWords));
     });
 };
 
