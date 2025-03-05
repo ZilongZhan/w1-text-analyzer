@@ -43,3 +43,16 @@ export const getShortWordsList = (words: string[]): string => {
 
   return wordsList.join(", ");
 };
+
+export const getWordFrequency = (text: string, word: string): number => {
+  const words = text
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((word) => word !== "");
+
+  const matchingWords = words.filter((currentWord) =>
+    currentWord.toLowerCase().includes(word.toLowerCase())
+  );
+
+  return matchingWords.length;
+};
