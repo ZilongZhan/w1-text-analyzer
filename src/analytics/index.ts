@@ -75,3 +75,20 @@ export const getReversedText = (text: string): string => {
 
   return trimmedReversedText;
 };
+
+export const getCensoredText = (
+  text: string,
+  prohibitedWords: string[]
+): string => {
+  const words = text.split(" ").filter((word) => word !== "");
+
+  const censoredWords = words.map((word) => {
+    const isProhibitedWord = prohibitedWords.some((prohibitedWord) =>
+      prohibitedWord.toLowerCase().includes(word.toLowerCase())
+    );
+
+    return isProhibitedWord ? word.replace(word, "*") : word;
+  });
+
+  return censoredWords.join(" ");
+};
