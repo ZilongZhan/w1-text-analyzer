@@ -4,6 +4,7 @@ import {
   getShortWordsTotal,
   getShortWordsList,
   getWordsTotal,
+  getWordFrequency,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -110,11 +111,9 @@ const listenFrequenciesChanges = (text: string): void => {
     .querySelectorAll("input")
     .forEach((frequencyInput, index) => {
       frequencyInput.addEventListener("input", (event) => {
-        // The variable word contains the text entered by the user in the input
         const word = (event.target as HTMLInputElement).value;
 
-        // Implement the frequency calculation here and delete this 0
-        const frequency = 0;
+        const frequency = getWordFrequency(text, word);
 
         frequenciesContainer.querySelector(
           `.word-${index + 1}-frequency`
