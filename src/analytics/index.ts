@@ -33,3 +33,13 @@ export const getShortWordsTotal = (text: string): number => {
 
   return shortWords.length;
 };
+
+export const getWordsList = (words: string[]): string => {
+  const wordsList = words
+    .join(" ")
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((word) => word !== "");
+
+  return wordsList.join(", ");
+};
