@@ -1,35 +1,35 @@
 export const getParagraphsTotal = (text: string): number => {
-  const trimmedText = text
+  const paragraphs = text
     .replaceAll(" ", "")
     .split("\n\n")
     .filter((paragraph) => paragraph !== "" && paragraph !== "\n");
 
-  return trimmedText.length;
+  return paragraphs.length;
 };
 
 export const getWordsTotal = (text: string): number => {
-  const trimmedText = text
+  const words = text
     .replaceAll("\n", " ")
     .split(" ")
     .filter((word) => word !== "");
 
-  return trimmedText.length;
+  return words.length;
 };
 
 export const getCharactersTotal = (text: string): number => {
-  const trimmedText = text
+  const characters = text
     .replaceAll("\n", "")
     .split("")
     .filter((character) => character !== " ");
 
-  return trimmedText.length;
+  return characters.length;
 };
 
 export const getShortWordsTotal = (text: string): number => {
-  const trimmedText = text
+  const shortWords = text
     .replaceAll("\n", " ")
     .split(" ")
     .filter((word) => word !== "" && word.length <= 4);
 
-  return trimmedText.length;
+  return shortWords.length;
 };

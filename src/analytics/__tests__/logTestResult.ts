@@ -8,7 +8,7 @@ export const logTestResult = (
 
   console.log(`\n${testFunction.name}()`);
 
-  console.log(`Test ${testNumber}: ${testData}`);
+  console.log(`Test ${testNumber}: "${testData}"`);
   console.log(`Expected Result: ${expectedResult} | Result: ${result}`);
 
   if (expectedResult === result) {
