@@ -1,5 +1,4 @@
 import { getWordsList } from "../index.js";
-import { logTestResult } from "./logTestResult.js";
 
 const test1 = (): void => {
   const words = ["hello", "world"];

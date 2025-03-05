@@ -1,32 +1,75 @@
 import { getWordsTotal } from "../index.js";
-import { logTestResult } from "./logTestResult.js";
 
 const test1 = (): void => {
   const text = "Hello world";
   const expectedWordsTotal = 2;
 
-  logTestResult(1, getWordsTotal, text, expectedWordsTotal);
+  const wordsTotal = getWordsTotal(text);
+
+  console.log(`\n${getWordsTotal.name}()`);
+
+  console.log(`Test 1: "${text}"`);
+  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+
+  if (expectedWordsTotal === wordsTotal) {
+    console.log("Test OK ✅");
+  } else {
+    console.log("Test failed ❌");
+  }
 };
 
 const test2 = (): void => {
   const text = "Hello\nworld";
   const expectedWordsTotal = 2;
 
-  logTestResult(2, getWordsTotal, text, expectedWordsTotal);
+  const wordsTotal = getWordsTotal(text);
+
+  console.log(`\n${getWordsTotal.name}()`);
+
+  console.log(`Test 2: "${text}"`);
+  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+
+  if (expectedWordsTotal === wordsTotal) {
+    console.log("Test OK ✅");
+  } else {
+    console.log("Test failed ❌");
+  }
 };
 
 const test3 = (): void => {
   const text = "";
   const expectedWordsTotal = 0;
 
-  logTestResult(3, getWordsTotal, text, expectedWordsTotal);
+  const wordsTotal = getWordsTotal(text);
+
+  console.log(`\n${getWordsTotal.name}()`);
+
+  console.log(`Test 3: "${text}"`);
+  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+
+  if (expectedWordsTotal === wordsTotal) {
+    console.log("Test OK ✅");
+  } else {
+    console.log("Test failed ❌");
+  }
 };
 
 const test4 = (): void => {
   const text = "\n";
   const expectedWordsTotal = 0;
 
-  logTestResult(4, getWordsTotal, text, expectedWordsTotal);
+  const wordsTotal = getWordsTotal(text);
+
+  console.log(`\n${getWordsTotal.name}()`);
+
+  console.log(`Test 4: "${text}"`);
+  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+
+  if (expectedWordsTotal === wordsTotal) {
+    console.log("Test OK ✅");
+  } else {
+    console.log("Test failed ❌");
+  }
 };
 
 export const getWordsTotalTest = (): void => {
