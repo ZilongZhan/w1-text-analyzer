@@ -2,6 +2,7 @@ import {
   getCharactersTotal,
   getParagraphsTotal,
   getShortWordsTotal,
+  getWordsList,
   getWordsTotal,
 } from "../analytics/index.js";
 
@@ -131,4 +132,12 @@ export const analyzeText = (text: string): void => {
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
   renderShortWordsTotal(getShortWordsTotal(text));
+  renderShortWordsList(
+    getWordsList(
+      text
+        .replaceAll("\n", " ")
+        .split(" ")
+        .filter((word) => word !== "" && word.length <= 4)
+    )
+  );
 };
