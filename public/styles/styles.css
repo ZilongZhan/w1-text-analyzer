@@ -98,7 +98,6 @@ h2 {
 
   h1 {
     text-decoration: underline;
-    font-size: 28px;
   }
 }
 
@@ -117,6 +116,10 @@ h2 {
   border: 2px solid #333;
   background-color: rgb(166, 203, 252);
   border-radius: 10px;
+
+  h2 {
+    font-size: 20px;
+  }
 }
 
 .frequencies-list {
