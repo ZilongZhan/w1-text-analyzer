@@ -172,6 +172,15 @@ h2 {
   transition: 0.4s;
 }
 
+.dark {
+  background-color: rgb(89, 89, 89);
+  color: white;
+
+  .analysis__item {
+    background-color: rgb(150, 150, 150);
+  }
+}
+
 input:checked + .slider {
   background-color: #222;
 }
