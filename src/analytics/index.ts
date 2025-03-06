@@ -94,7 +94,10 @@ export const getCensoredText = (
 };
 
 export const getCamelCaseText = (text: string): string => {
-  const words = text.split(" ").filter((word) => word !== "");
+  const words = text
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((word) => word !== "");
 
   if (words.every((word) => word === "")) {
     return "";

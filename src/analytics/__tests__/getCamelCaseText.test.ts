@@ -60,8 +60,29 @@ const test3 = (): void => {
   }
 };
 
+const test4 = (): void => {
+  const text = "hello\nworld";
+  const expectedText = "helloWorld";
+
+  const camelCaseText = getCamelCaseText(text);
+
+  console.log(`\n${getCamelCaseText.name}()`);
+
+  console.log(`Test 4: "${text}"`);
+  console.log(
+    `Expected Result: "${expectedText}" | Result: "${camelCaseText}"`
+  );
+
+  if (expectedText === camelCaseText) {
+    console.log("Test OK ✅");
+  } else {
+    console.log("Test failed ❌");
+  }
+};
+
 export const getCamelCaseTextTest = (): void => {
   test1();
   test2();
   test3();
+  test4();
 };
