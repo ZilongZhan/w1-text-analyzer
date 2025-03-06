@@ -9,7 +9,9 @@ const test1 = (): void => {
   console.log(`\n${getWordsTotal.name}()`);
 
   console.log(`Test 1: "${text}"`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+  console.log(
+    `Expected Result: "${expectedWordsTotal}" | Result: "${wordsTotal}"`
+  );
 
   if (expectedWordsTotal === wordsTotal) {
     console.log("Test OK ✅");
@@ -27,7 +29,9 @@ const test2 = (): void => {
   console.log(`\n${getWordsTotal.name}()`);
 
   console.log(`Test 2: "${text}"`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+  console.log(
+    `Expected Result: "${expectedWordsTotal}" | Result: "${wordsTotal}"`
+  );
 
   if (expectedWordsTotal === wordsTotal) {
     console.log("Test OK ✅");
@@ -45,7 +49,9 @@ const test3 = (): void => {
   console.log(`\n${getWordsTotal.name}()`);
 
   console.log(`Test 3: "${text}"`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+  console.log(
+    `Expected Result: "${expectedWordsTotal}" | Result: "${wordsTotal}"`
+  );
 
   if (expectedWordsTotal === wordsTotal) {
     console.log("Test OK ✅");
@@ -63,7 +69,9 @@ const test4 = (): void => {
   console.log(`\n${getWordsTotal.name}()`);
 
   console.log(`Test 4: "${text}"`);
-  console.log(`Expected Result: ${expectedWordsTotal} | Result: ${wordsTotal}`);
+  console.log(
+    `Expected Result: "${expectedWordsTotal}" | Result: "${wordsTotal}"`
+  );
 
   if (expectedWordsTotal === wordsTotal) {
     console.log("Test OK ✅");

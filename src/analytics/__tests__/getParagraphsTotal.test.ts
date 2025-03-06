@@ -10,7 +10,7 @@ const test1 = (): void => {
 
   console.log(`Test 1: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {
@@ -30,7 +30,7 @@ const test2 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {
@@ -50,7 +50,7 @@ const test3 = (): void => {
 
   console.log(`Test 3: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {
@@ -70,7 +70,7 @@ const test4 = (): void => {
 
   console.log(`Test 4: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {
@@ -90,7 +90,7 @@ const test5 = (): void => {
 
   console.log(`Test 5: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {
@@ -110,7 +110,7 @@ const test6 = (): void => {
 
   console.log(`Test 6: "${text}"`);
   console.log(
-    `Expected Result: ${expectedParagraphsTotal} | Result: ${paragraphsTotal}`
+    `Expected Result: "${expectedParagraphsTotal}" | Result: "${paragraphsTotal}"`
   );
 
   if (expectedParagraphsTotal === paragraphsTotal) {

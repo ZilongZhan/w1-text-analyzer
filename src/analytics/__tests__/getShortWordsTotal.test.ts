@@ -10,7 +10,7 @@ const test1 = (): void => {
 
   console.log(`Test 1: "${text}"`);
   console.log(
-    `Expected Result: ${expectedShortWordsTotal} | Result: ${shortWordsTotal}`
+    `Expected Result: "${expectedShortWordsTotal}" | Result: "${shortWordsTotal}"`
   );
 
   if (expectedShortWordsTotal === shortWordsTotal) {
@@ -30,7 +30,7 @@ const test2 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedShortWordsTotal} | Result: ${shortWordsTotal}`
+    `Expected Result: "${expectedShortWordsTotal}" | Result: "${shortWordsTotal}"`
   );
 
   if (expectedShortWordsTotal === shortWordsTotal) {
@@ -50,7 +50,7 @@ const test3 = (): void => {
 
   console.log(`Test 3: "${text}"`);
   console.log(
-    `Expected Result: ${expectedShortWordsTotal} | Result: ${shortWordsTotal}`
+    `Expected Result: "${expectedShortWordsTotal}" | Result: "${shortWordsTotal}"`
   );
 
   if (expectedShortWordsTotal === shortWordsTotal) {

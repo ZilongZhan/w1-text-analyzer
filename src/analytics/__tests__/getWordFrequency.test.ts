@@ -11,7 +11,7 @@ const test1 = (): void => {
 
   console.log(`Test 1: "${text}"`);
   console.log(
-    `Expected Result: ${expectedWordFrequency} | Result: ${wordFrequency}`
+    `Expected Result: "${expectedWordFrequency}" | Result: "${wordFrequency}"`
   );
 
   if (expectedWordFrequency === wordFrequency) {
@@ -32,7 +32,7 @@ const test2 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedWordFrequency} | Result: ${wordFrequency}`
+    `Expected Result: "${expectedWordFrequency}" | Result: "${wordFrequency}"`
   );
 
   if (expectedWordFrequency === wordFrequency) {
@@ -53,7 +53,7 @@ const test3 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedWordFrequency} | Result: ${wordFrequency}`
+    `Expected Result: "${expectedWordFrequency}" | Result: "${wordFrequency}"`
   );
 
   if (expectedWordFrequency === wordFrequency) {
@@ -74,7 +74,7 @@ const test4 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedWordFrequency} | Result: ${wordFrequency}`
+    `Expected Result: "${expectedWordFrequency}" | Result: "${wordFrequency}"`
   );
 
   if (expectedWordFrequency === wordFrequency) {

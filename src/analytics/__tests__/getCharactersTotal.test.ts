@@ -10,7 +10,7 @@ const test1 = (): void => {
 
   console.log(`Test 1: "${text}"`);
   console.log(
-    `Expected Result: ${expectedCharactersTotal} | Result: ${charactersTotal}`
+    `Expected Result: "${expectedCharactersTotal}" | Result: "${charactersTotal}"`
   );
 
   if (expectedCharactersTotal === charactersTotal) {
@@ -30,7 +30,7 @@ const test2 = (): void => {
 
   console.log(`Test 2: "${text}"`);
   console.log(
-    `Expected Result: ${expectedCharactersTotal} | Result: ${charactersTotal}`
+    `Expected Result: "${expectedCharactersTotal}" | Result: "${charactersTotal}"`
   );
 
   if (expectedCharactersTotal === charactersTotal) {
@@ -50,7 +50,7 @@ const test3 = (): void => {
 
   console.log(`Test 3: "${text}"`);
   console.log(
-    `Expected Result: ${expectedCharactersTotal} | Result: ${charactersTotal}`
+    `Expected Result: "${expectedCharactersTotal}" | Result: "${charactersTotal}"`
   );
 
   if (expectedCharactersTotal === charactersTotal) {
@@ -70,7 +70,7 @@ const test4 = (): void => {
 
   console.log(`Test 4: "${text}"`);
   console.log(
-    `Expected Result: ${expectedCharactersTotal} | Result: ${charactersTotal}`
+    `Expected Result: "${expectedCharactersTotal}" | Result: "${charactersTotal}"`
   );
 
   if (expectedCharactersTotal === charactersTotal) {
