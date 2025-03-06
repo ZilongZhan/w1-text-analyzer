@@ -138,7 +138,7 @@ export const analyzeText = (text: string): void => {
       text
         .replaceAll("\n", " ")
         .split(" ")
-        .filter((word) => word !== "" && word.length <= 4)
+        .filter((word) => word !== "")
     )
   );
   renderReversedText(getReversedText(text));

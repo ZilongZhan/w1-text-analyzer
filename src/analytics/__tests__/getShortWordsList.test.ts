@@ -90,7 +90,7 @@ const test5 = () => {
   }
 };
 
-export const getWordsListTest = (): void => {
+export const getShortWordsListTest = (): void => {
   test1();
   test2();
   test3();

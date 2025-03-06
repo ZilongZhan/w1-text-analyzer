@@ -39,7 +39,7 @@ export const getShortWordsList = (words: string[]): string => {
     .join(" ")
     .replaceAll("\n", " ")
     .split(" ")
-    .filter((word) => word !== "");
+    .filter((word) => word !== "" && word.length <= 4);
 
   return wordsList.join(", ");
 };
