@@ -92,3 +92,22 @@ export const getCensoredText = (
 
   return censoredWords.join(" ");
 };
+
+export const getCamelCaseText = (text: string): string => {
+  const words = text.split(" ").filter((word) => word !== "");
+
+  if (words.every((word) => word === "")) {
+    return "";
+  }
+
+  const firstWord = words.shift()!;
+  const remainingWords = words.map(
+    (word) => word[0].toUpperCase() + word.slice(1)
+  );
+
+  const camelCaseText = [firstWord[0].toLowerCase() + firstWord.slice(1)]
+    .concat(remainingWords)
+    .join("");
+
+  return camelCaseText;
+};
