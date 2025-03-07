@@ -81,11 +81,14 @@ h2 {
     width: 50%;
     align-self: flex-end;
     border: 1px solid black;
-    opacity: 80%;
 
     &:hover {
       background-color: transparent;
       color: black;
+    }
+
+    &:disabled {
+      opacity: 80%;
       cursor: not-allowed;
     }
   }
