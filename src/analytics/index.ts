@@ -45,6 +45,10 @@ export const getShortWordsList = (words: string[]): string => {
 };
 
 export const getWordFrequency = (text: string, word: string): number => {
+  if (word === "") {
+    return 0;
+  }
+
   const words = text
     .replaceAll("\n", " ")
     .split(" ")
