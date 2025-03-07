@@ -76,10 +76,14 @@ h2 {
     font-family: Consolas, monospace;
     border-radius: 10px;
   }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
 
   button {
-    width: 50%;
-    align-self: flex-end;
+    width: 49%;
     border: 1px solid black;
 
     &:hover {
