@@ -12,28 +12,20 @@ import {
 
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");
-const palindromesContainer = document.querySelector(".palindromes");
 const frequenciesContainer = document.querySelector(
   ".frequencies .frequencies-list"
 );
-const reversedWordsContainer = document.querySelector(".reversed-words");
 const reversedTextContainer = document.querySelector(".reversed-text");
 const forbiddenContainer = document.querySelector(".forbidden");
 const camelCaseContainer = document.querySelector(".camel-case");
-const kebabCaseContainer = document.querySelector(".kebab-case");
-const snakeCaseContainer = document.querySelector(".snake-case");
 
 if (
   !totalsContainer ||
   !shortWordsContainer ||
-  !palindromesContainer ||
   !frequenciesContainer ||
-  !reversedWordsContainer ||
   !reversedTextContainer ||
   !forbiddenContainer ||
-  !camelCaseContainer ||
-  !kebabCaseContainer ||
-  !snakeCaseContainer
+  !camelCaseContainer
 ) {
   throw new Error("Missing elements");
 }
@@ -62,18 +54,9 @@ const renderShortWordsList = (shortWords: string): void => {
   shortWordsContainer.querySelector(".short-words")!.textContent = shortWords;
 };
 
-const renderPalindromes = (palindromes: string): void => {
-  palindromesContainer.querySelector(".palindromes")!.textContent = palindromes;
-};
-
 const renderForbiddenWords = (forbiddenWords: string): void => {
   forbiddenContainer.querySelector(".censured-text")!.textContent =
     forbiddenWords;
-};
-
-const renderReversedWords = (reversedWords: string): void => {
-  reversedWordsContainer.querySelector(".reversed-words-list")!.textContent =
-    reversedWords;
 };
 
 const renderReversedText = (reversedText: string): void => {
@@ -84,16 +67,6 @@ const renderReversedText = (reversedText: string): void => {
 const renderCamelCase = (camelCaseText: string): void => {
   camelCaseContainer.querySelector(".camel-case-text")!.textContent =
     camelCaseText;
-};
-
-const renderKebabCase = (kebabCaseText: string): void => {
-  kebabCaseContainer.querySelector(".kebab-case-text")!.textContent =
-    kebabCaseText;
-};
-
-const renderSnakeCase = (snakeCaseText: string): void => {
-  snakeCaseContainer.querySelector(".snake-case-text")!.textContent =
-    snakeCaseText;
 };
 
 const listenForbiddenWordsChanges = (text: string): void => {
