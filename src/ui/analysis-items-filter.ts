@@ -18,5 +18,8 @@ filters.forEach((filter) => {
 
   window.addEventListener("submit", () => {
     thisFilter.checked = false;
+    document
+      .querySelector(`.analysis__item.${analysisItemClass}`)
+      ?.classList.remove("filtered");
   });
 });
