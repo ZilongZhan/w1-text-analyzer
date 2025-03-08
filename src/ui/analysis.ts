@@ -10,14 +10,16 @@ import {
   getCamelCaseText,
 } from "../analytics/index.js";
 
-const totalsContainer = document.querySelector(".totals");
-const shortWordsContainer = document.querySelector(".short");
+const totalsContainer = document.querySelector(".analysis__item.totals");
+const shortWordsContainer = document.querySelector(".analysis__item.short");
 const frequenciesContainer = document.querySelector(
-  ".frequencies .frequencies-list"
+  ".analysis__item.frequencies .frequencies-list"
 );
-const reversedTextContainer = document.querySelector(".reversed-text");
-const forbiddenContainer = document.querySelector(".forbidden");
-const camelCaseContainer = document.querySelector(".camel-case");
+const reversedTextContainer = document.querySelector(
+  ".analysis__item.reversed-text"
+);
+const forbiddenContainer = document.querySelector(".analysis__item.forbidden");
+const camelCaseContainer = document.querySelector(".analysis__item.camel-case");
 
 if (
   !totalsContainer ||
