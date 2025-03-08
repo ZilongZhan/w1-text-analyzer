@@ -23,7 +23,7 @@ button {
   border: none;
 
   &:hover {
-    cursor: grab;
+    cursor: pointer;
   }
 }
 
