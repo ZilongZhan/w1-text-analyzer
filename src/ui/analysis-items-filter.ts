@@ -15,4 +15,8 @@ filters.forEach((filter) => {
         ?.classList.remove("filtered");
     }
   });
+
+  window.addEventListener("submit", () => {
+    thisFilter.checked = false;
+  });
 });
