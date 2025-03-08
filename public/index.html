@@ -24,9 +24,37 @@
       <textarea id="text" spellcheck="false"></textarea>
       <div class="buttons-container">
         <button class="button" type="submit">Analyze</button>
-        <button class="button" type="reset">Empty text</button>
+        <button class="button reset-button" type="reset">Empty text</button>
       </div>
     </form>
+    <div class="filters-container">
+      <ul class="filters-list">
+        <li>
+          <label for="totals-filter">Totals</label>
+          <input class="totals filter" type="checkbox" id="totals-filter">
+        </li>
+        <li>
+          <label for="short-words-filter">Short words</label>
+          <input class="short filter" type="checkbox" id="short-words-filter">
+        </li>
+        <li>
+          <label for="frequencies-filter">Frequencies</label>
+          <input class="frequencies filter" type="checkbox" id="frequencies-filter">
+        </li>
+        <li>
+          <label for="reversed-text-filter">Reversed text</label>
+          <input class="reversed-text filter" type="checkbox" id="reversed-text-filter">
+        </li>
+        <li>
+          <label for="forbidden-words-filter">Forbidden words</label>
+          <input class="forbidden filter" type="checkbox" id="forbidden-words-filter">
+        </li>
+        <li>
+          <label for="camel-case-filter">Camel case</label>
+          <input class="camel-case filter" type="checkbox" id="camel-case-filter">
+        </li>
+      </ul>
+    </div>
     <div class="analysis">
       <div class="analysis__item totals">
         <h2>Totals</h2>
