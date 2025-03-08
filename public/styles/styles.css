@@ -38,6 +38,7 @@ input {
 
 a {
   color: inherit;
+  margin-bottom: 5px;
 
   &:hover {
     color: inherit;
