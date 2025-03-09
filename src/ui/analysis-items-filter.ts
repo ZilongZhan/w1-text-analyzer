@@ -8,16 +8,16 @@ filters.forEach((filter) => {
     if (thisFilter.checked) {
       document
         .querySelector(`.analysis__item.${analysisItemClass}`)
-        ?.classList.add("filtered");
+        ?.classList.remove("filtered");
     } else {
       document
         .querySelector(`.analysis__item.${analysisItemClass}`)
-        ?.classList.remove("filtered");
+        ?.classList.add("filtered");
     }
   });
 
   window.addEventListener("submit", () => {
-    thisFilter.checked = false;
+    thisFilter.checked = true;
     document
       .querySelector(`.analysis__item.${analysisItemClass}`)
       ?.classList.remove("filtered");
