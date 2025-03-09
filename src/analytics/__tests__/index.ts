@@ -7,6 +7,7 @@ import { getWordFrequencyTest } from "./getWordFrequency.test.js";
 import { getReversedTextTest } from "./getReversedText.test.js";
 import { getCensoredTextTest } from "./getCensoredText.test.js";
 import { getCamelCaseTextTest } from "./getCamelCaseText.test.js";
+import { getFilteredWordsTest } from "./getFilteredWords.test.js";
 
 getParagraphsTotalTest();
 getWordsTotalTest();
@@ -17,3 +18,4 @@ getWordFrequencyTest();
 getReversedTextTest();
 getCensoredTextTest();
 getCamelCaseTextTest();
+getFilteredWordsTest();
