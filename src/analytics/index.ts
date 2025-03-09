@@ -1,47 +1,33 @@
+import { getCharacters, getParagraphs, getWords } from "./utilities/index.js";
+
 export const getParagraphsTotal = (text: string): number => {
-  const paragraphs = text
-    .replaceAll(" ", "")
-    .split("\n\n")
-    .filter((paragraph) => paragraph !== "" && paragraph !== "\n");
+  const paragraphs = getParagraphs(text);
 
   return paragraphs.length;
 };
 
 export const getWordsTotal = (text: string): number => {
-  const words = text
-    .replaceAll("\n", " ")
-    .split(" ")
-    .filter((word) => word !== "");
+  const words = getWords(text);
 
   return words.length;
 };
 
 export const getCharactersTotal = (text: string): number => {
-  const characters = text
-    .replaceAll("\n", "")
-    .split("")
-    .filter((character) => character !== " ");
+  const characters = getCharacters(text);
 
   return characters.length;
 };
 
-export const getShortWordsTotal = (text: string): number => {
-  const shortWords = text
-    .replaceAll("\n", " ")
-    .split(" ")
-    .filter((word) => word !== "" && word.length <= 4);
+export const getShortWordsTotal = (text: string, maxWordLength = 4): number => {
+  const shortWords = getFilteredWords(text, maxWordLength);
 
   return shortWords.length;
 };
 
-export const getShortWordsList = (words: string[]): string => {
-  const wordsList = words
-    .join(" ")
-    .replaceAll("\n", " ")
-    .split(" ")
-    .filter((word) => word !== "" && word.length <= 4);
+export const getWordsList = (words: string[]): string => {
+  const wordsList = getWords(words.join(" ")).join(", ");
 
-  return wordsList.join(", ");
+  return wordsList;
 };
 
 export const getWordFrequency = (text: string, word: string): number => {
@@ -49,10 +35,7 @@ export const getWordFrequency = (text: string, word: string): number => {
     return 0;
   }
 
-  const words = text
-    .replaceAll("\n", " ")
-    .split(" ")
-    .filter((word) => word !== "");
+  const words = getWords(text);
 
   const matchingWords = words.filter((currentWord) =>
     currentWord.toLowerCase().includes(word.toLowerCase())
@@ -84,7 +67,7 @@ export const getCensoredText = (
   text: string,
   prohibitedWords: string[]
 ): string => {
-  const words = text.split(" ").filter((word) => word !== "");
+  const words = getWords(text);
 
   const censoredWords = words.map((word) => {
     const isProhibitedWord = prohibitedWords.some((prohibitedWord) =>
@@ -98,23 +81,26 @@ export const getCensoredText = (
 };
 
 export const getCamelCaseText = (text: string): string => {
-  const words = text
-    .replaceAll("\n", " ")
-    .split(" ")
-    .filter((word) => word !== "");
+  const words = getWords(text);
 
-  if (words.every((word) => word === "")) {
+  if (words.join("") === "") {
     return "";
   }
 
-  const firstWord = words.shift()!;
-  const remainingWords = words.map(
-    (word) => word[0].toUpperCase() + word.slice(1)
-  );
-
-  const camelCaseText = [firstWord[0].toLowerCase() + firstWord.slice(1)]
-    .concat(remainingWords)
+  const firstWord = words.shift()!.toLowerCase();
+  const remainingWords = words
+    .map((word) => word[0].toUpperCase() + word.slice(1))
     .join("");
 
+  const camelCaseText = firstWord + remainingWords;
+
   return camelCaseText;
+};
+
+export const getFilteredWords = (text: string, maxWordLength = 4): string[] => {
+  const filteredWords = getWords(text).filter(
+    (word) => word.length <= maxWordLength
+  );
+
+  return filteredWords;
 };

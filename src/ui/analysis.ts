@@ -2,12 +2,13 @@ import {
   getCharactersTotal,
   getParagraphsTotal,
   getShortWordsTotal,
-  getShortWordsList,
+  getWordsList,
   getWordsTotal,
   getWordFrequency,
   getReversedText,
   getCensoredText,
   getCamelCaseText,
+  getFilteredWords,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".analysis__item.totals");
@@ -100,7 +101,6 @@ const listenFrequenciesChanges = (text: string): void => {
 };
 
 export const analyzeText = (text: string): void => {
-  // Keep this two calls
   listenFrequenciesChanges(text);
   listenForbiddenWordsChanges(text);
 
@@ -108,14 +108,7 @@ export const analyzeText = (text: string): void => {
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
   renderShortWordsTotal(getShortWordsTotal(text));
-  renderShortWordsList(
-    getShortWordsList(
-      text
-        .replaceAll("\n", " ")
-        .split(" ")
-        .filter((word) => word !== "")
-    )
-  );
+  renderShortWordsList(getWordsList(getFilteredWords(text)));
   renderReversedText(getReversedText(text));
   renderCamelCase(getCamelCaseText(text));
 };

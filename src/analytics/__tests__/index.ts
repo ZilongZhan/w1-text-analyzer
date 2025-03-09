@@ -1,7 +1,7 @@
 import { getCharactersTotalTest } from "./getCharactersTotal.test.js";
 import { getParagraphsTotalTest } from "./getParagraphsTotal.test.js";
 import { getShortWordsTotalTest } from "./getShortWordsTotal.test.js";
-import { getShortWordsListTest } from "./getShortWordsList.test.js";
+import { getWordsListTest } from "./getWordsList.js";
 import { getWordsTotalTest } from "./getWordsTotal.test.js";
 import { getWordFrequencyTest } from "./getWordFrequency.test.js";
 import { getReversedTextTest } from "./getReversedText.test.js";
@@ -12,7 +12,7 @@ getParagraphsTotalTest();
 getWordsTotalTest();
 getCharactersTotalTest();
 getShortWordsTotalTest();
-getShortWordsListTest();
+getWordsListTest();
 getWordFrequencyTest();
 getReversedTextTest();
 getCensoredTextTest();
